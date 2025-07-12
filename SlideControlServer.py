@@ -14,7 +14,7 @@ KEY_MAP = {
 
 @app.route('/press', methods=['GET'])
 def press_key():
-    key = request.args.get('key', '').lower()
+        key = request.args.get('key', '').lower()
 
     if key in KEY_MAP:
         pyautogui.press(KEY_MAP[key])
